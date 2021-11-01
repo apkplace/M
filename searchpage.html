@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>search</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+background-image: url('background.jpeg');
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: cover;
+overflow-y: hidden;
+}
+
+.header {
+background-color: lightgreen;
+width: 100%;
+height: 45px;
+}
+
+.header a {
+font-size: 20px;
+font-weight: bold;
+position: absolute;
+margin: 8px;
+color: black;
+}
+
+.header img {
+float: right;
+margin: 10px;
+}
+
+.center {
+position: absolute;
+  left: 50%;
+  top: 3.6rem;
+  transform: translate(-50%);
+  width: 22rem;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 80%;
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 2px solid darkgreen; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+  border-radius: 20px;
+}
+
+#myInput:hover {
+border: 2px solid lightgreen;
+border-radius: 20px;
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+border-radius: 10px;
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: rgba(33, 47, 60, 0.8); /* background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: white; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+  color: black; /* Add a hover effect to all links, except for headers */
+}
+
+
+/*media*/
+
+@media(max-width: 2560px) {
+
+.center {
+position: absolute;
+  left: 50%;
+  top: 3.6rem;
+  transform: translate(-50%);
+  width: 30rem;
+  }
+  
+  #myInput {
+  background-image: url('search.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 26rem;
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 2px solid darkgreen; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+  border-radius: 20px;
+ }
+
+}
+
+@media(max-width: 800px) {
+
+ .center {
+position: absolute;
+  left: 50%;
+  top: 3.6rem;
+  transform: translate(-50%);
+  width: 25rem;
+  }
+
+ #myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 21rem;
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 2px solid darkgreen; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+  border-radius: 20px;
+ }
+  
+}
+
+
+
+
+
+@media(max-width: 470px) {
+
+.center {
+position: absolute;
+  left: 50%;
+  top: 3.6rem;
+  transform: translate(-50%);
+  width: 22rem;
+  }
+
+   #myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 18rem;
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 2px solid darkgreen; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+  border-radius: 20px;
+ }
+  
+}
+
+
+
+@media(max-width: 380px) {
+  .center {
+position: absolute;
+  left: 50%;
+  top: 3.6rem;
+  transform: translate(-50%);
+  width: 20rem;
+  }
+
+    #myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 16rem;
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 2px solid darkgreen; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+  border-radius: 20px;
+ }
+  
+}
+
+
+
+
+
+@media(max-width: 290px) {
+
+.center {
+position: absolute;
+  left: 50%;
+  top: 3.6rem;
+  transform: translate(-50%);
+  width: 16rem;
+  }
+
+   #myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 12rem;
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 2px solid darkgreen; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+  border-radius: 20px;
+ }
+}
+
+</style>
+
+</head>
+<body>
+<div class="header">
+<a>ApkPlace</a>
+ <span class="back" onclick="goBack()"><img src="https://img.icons8.com/plumpy/24/000000/return.png"/></span>
+ </div>
+
+<div class="center">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for apps and games..">
+
+<ul id="myUL">
+  <li><a href="minecraft.html">Minecraft PE</a></li>
+  <li><a href="survivalcraft.html">Survivalcraft 2</a></li>
+
+  <li><a href="realchess3d.html">Realchess3D</a></li>
+  <li><a href="asphalt2.html">Asphalt Nitro 2</a></li>
+
+  <li><a href="amongus.html">Among Us</a></li>
+  <li><a href="mobilelegends.html">Mobile Legends</a></li>
+  <li><a href="puretuber.html">PureTuber</a></li>
+  <li><a href="operabrowser.html">Opera Browser</a></li>
+  <li><a href="#">Name</a></li>
+  <li><a href="#">Name</a></li>
+  <li><a href="#">Name</a></li>
+  <li><a href="#">Name</a></li>
+  <li><a href="#">Name</a></li>
+  <li><a href="#">Name</a></li>
+</ul>
+</div>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+function goBack() {
+  window.history.back();
+}
+
+</script>
+</body>
+</html>
